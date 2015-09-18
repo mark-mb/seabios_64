@@ -40,6 +40,8 @@ void finish_preempt(void);
 int wait_preempt(void);
 void check_preempt(void);
 u32 call32_params(void *func, u32 eax, u32 edx, u32 ecx, u32 errret);
+u32 call64(void *page_table, void *func, u32 eax);
+void *gen_identity_page_table(u64 max_addr);
 
 // Inline functions
 
